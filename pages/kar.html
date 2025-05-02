@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলা শিখি - কার-চিহ্ন</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="kar-page">
+    <header>
+        <h1>কার-চিহ্ন</h1>
+    </header>
+    
+    <main class="page-container">
+        <a href="../index.html" class="back-button">← হোমে ফিরে যান</a>
+        
+        <div class="item-grid">
+            <div class="item-card kar-item" data-audio="../audio/kar/akar.mp3">
+                <h3>আ-কার (া)</h3>
+                <p>ম<span class="highlight">া</span> + টি = মাটি</p>
+            </div>
+            
+            <div class="item-card kar-item" data-audio="../audio/kar/ikar.mp3">
+                <h3>ই-কার (ি)</h3>
+                <p>দ<span class="highlight">ি</span> + দি = দিদি</p>
+            </div>
+            
+            <div class="item-card kar-item" data-audio="../audio/kar/eekar.mp3">
+                <h3>ঈ-কার (ী)</h3>
+                <p>গ<span class="highlight">ী</span> + তা= গীতা</p>
+            </div>
+            
+            <div class="item-card kar-item" data-audio="../audio/kar/ukar.mp3">
+                <h3>উ-কার (ু)</h3>
+                <p>ঘ<span class="highlight">ু</span> + ঘু= ঘুঘু</p>
+            </div>
+            
+            <div class="item-card kar-item" data-audio="../audio/kar/ookar.mp3">
+                <h3>ঊ-কার (ূ)</h3>
+                <p>জ<span class="highlight">ূ</span> + ন = জুন</p>
+            </div>
+            
+            <div class="item-card kar-item" data-audio="../audio/kar/rikar.mp3">
+                <h3>ঋ-কার (ৃ)</h3>
+                <p>ক<span class="highlight">ৃ</span> + পা = কৃপা</p>
+            </div>
+            
+            <div class="item-card kar-item" data-audio="../audio/kar/ekar.mp3">
+                <h3>এ-কার (ে)</h3>
+                <p>ম<span class="highlight">ে</span> + ঘ = মেঘ</p>
+            </div>
+            
+            <div class="item-card kar-item" data-audio="../audio/kar/oikar.mp3">
+                <h3>ঐ-কার (ৈ)</h3>
+                <p>দ<span class="highlight">ৈ</span> + ত্য = দৈত্য</p>
+            </div>
+            
+            <div class="item-card kar-item" data-audio="../audio/kar/okar.mp3">
+                <h3>ও-কার (ো)</h3>
+                <p>জ<span class="highlight">ো</span> + ড়া = জোড়া</p>
+            </div>
+            
+            <div class="item-card kar-item" data-audio="../audio/kar/oukar.mp3">
+                <h3>ঔ-কার (ৌ)</h3>
+                <p>ন<span class="highlight">ৌ</span> + কা = নৌকা</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 বাংলা শিখি</p>
+    </footer>
+    
+    <script src="../script.js"></script>
+    <script>
+        document.querySelectorAll('.kar-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const audioPath = this.getAttribute('data-audio');
+                const audio = new Audio(audioPath);
+                audio.play().catch(e => console.log("Audio error:", e));
+            });
+        });
+    </script>
+</body>
+</html>

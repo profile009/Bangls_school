@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলা শিখি - কবিতা ও ছড়া</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="poems-page">
+    <header>
+        <h1>কবিতা ও ছড়া</h1>
+    </header>
+    
+    <main class="page-container">
+        <a href="../index.html" class="back-button">← হোমে ফিরে যান</a>
+        
+        <div class="poem-list">
+            <div class="poem-card poem-item" data-audio="../audio/poems/kobita1.mp3">
+                <h3>আমাদের ছোট নদী</h3>
+                <p>আমাদের ছোট নদী চলে বাঁকে বাঁকে,<br>
+                বৈশাখ মাসে তার হাঁটু জল থাকে...</p>
+            </div>
+            
+            <div class="poem-card poem-item" data-audio="../audio/poems/kobita2.mp3">
+                <h3>খাঁচার ভিতর অচিন পাখি</h3>
+                <p>খাঁচার ভিতর অচিন পাখি,<br>
+                কেমনে আসে যায়...</p>
+            </div>
+            
+            <div class="poem-card poem-item" data-audio="../audio/poems/kobita3.mp3">
+                <h3>হাট্টিমা টিম টিম</h3>
+                <p>হাট্টিমা টিম টিম,<br>
+                তালা ভাঙলে দিম দিম...</p>
+            </div>
+            
+            <div class="poem-card poem-item" data-audio="../audio/poems/kobita4.mp3">
+                <h3>আমার ভাই</h3>
+                <p>আমার ভাইয়ের রক্তে রাঙানো<br>
+                একুশে ফেব্রুয়ারি...</p>
+            </div>
+            
+            <div class="poem-card poem-item" data-audio="../audio/poems/kobita5.mp3">
+                <h3>ধান ভানলে কুঁড়ো দেব</h3>
+                <p>ধান ভানলে কুঁড়ো দেব,<br>
+                পিঠে দেব চাল...</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 বাংলা শিখি</p>
+    </footer>
+    
+    <script src="../script.js"></script>
+    <script>
+        document.querySelectorAll('.poem-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const audioPath = this.getAttribute('data-audio');
+                const audio = new Audio(audioPath);
+                audio.play().catch(e => console.log("Audio error:", e));
+            });
+        });
+    </script>
+</body>
+</html>

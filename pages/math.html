@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলা শিখি - সহজ অংক</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="math-page">
+    <header>
+        <h1>সহজ অংক</h1>
+    </header>
+    
+    <main class="page-container">
+        <a href="../index.html" class="back-button">← হোমে ফিরে যান</a>
+        
+        <div class="math-tabs">
+            <button class="math-tab-button active" onclick="openMathTab('addition')">যোগ</button>
+            <button class="math-tab-button" onclick="openMathTab('subtraction')">বিয়োগ</button>
+            <button class="math-tab-button" onclick="openMathTab('multiplication')">গুণ</button>
+            <button class="math-tab-button" onclick="openMathTab('division')">ভাগ</button>
+        </div>
+        
+        <div id="addition" class="math-tab-content" style="display:block;">
+            <div class="math-problem">
+                <p>৫ + ৩ = <span class="answer">৮</span></p>
+            </div>
+            <div class="math-problem">
+                <p>৭ + ২ = <span class="answer">৯</span></p>
+            </div>
+            <div class="math-problem">
+                <p>১০ + ৪ = <span class="answer">১৪</span></p>
+            </div>
+            <div class="math-problem">
+                <p>৮ + ৩ = <span class="answer">১১</span></p>
+            </div>
+        </div>
+        
+        <div id="subtraction" class="math-tab-content">
+            <div class="math-problem">
+                <p>২০ - ১২ = <span class="answer">৮</span></p>
+            </div>
+            <div class="math-problem">
+                <p>১৮ - ৮ = <span class="answer">১০</span></p>
+            </div>
+            <div class="math-problem">
+                <p>১০ - ৪ = <span class="answer">৬</span></p>
+            </div>
+            <div class="math-problem">
+                <p>৮ - ৩ = <span class="answer">৫</span></p>
+            </div>
+        </div>
+        
+        <div id="division" class="math-tab-content">
+            <div class="math-problem">
+                <p>৪০ ÷ ৪ = <span class="answer">১০</span></p>
+            </div>
+            <div class="math-problem">
+                <p>১৮ ÷ ৩ = <span class="answer">৬</span></p>
+            </div>
+            <div class="math-problem">
+                <p>২০ ÷ ৪ = <span class="answer">৫</span></p>
+            </div>
+            <div class="math-problem">
+                <p>৮ ÷ ২ = <span class="answer">৪</span></p>
+            </div>
+        </div>
+
+        <div id="multiplication" class="math-tab-content">
+            <div class="math-problem">
+                <p>৮ × ৪ = <span class="answer">৩২</span></p>
+            </div>
+            <div class="math-problem">
+                <p>৮ × ৫ = <span class="answer">৪০</span></p>
+            </div>
+            <div class="math-problem">
+                <p>৩ × ৭ = <span class="answer">২১</span></p>
+            </div>
+            <div class="math-problem">
+                <p>৮ × ৩ = <span class="answer">২৪</span></p>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer>
+        <p>© 2023 বাংলা শিখি</p>
+    </footer>
+    
+    <script src="../script.js"></script>
+    <script>
+        function openMathTab(tabName) {
+            const tabContents = document.getElementsByClassName("math-tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = "none";
+            }
+            
+            const tabButtons = document.getElementsByClassName("math-tab-button");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

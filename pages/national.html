@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলা শিখি - জাতিয় ফুল-ফল-পশু-পাখি</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="english-alphabet-page">
+    <header>
+        <h1>জাতিয় ফুল-ফল-পশু-পাখি</h1>
+    </header>
+    
+    <main class="page-container">
+        <a href="../index.html" class="back-button">← হোমে ফিরে যান</a>
+        
+        <div class="item-grid">
+            <div class="item-card alphabet-item" data-audio="../audio/english-alphabet/a.mp3">
+                <img src="../images/english-alphabet/tiger.png" alt="A">
+                <h3> রয়েল বেঙ্গল টাইগার(বাঘ)</h3>
+                <p>জাতীয় পশু</p>
+            </div>
+            
+            <div class="item-card alphabet-item" data-audio="../audio/english-alphabet/b.mp3">
+                <img src="../images/english-alphabet/doyel.webp" alt="B">
+                <h2> দোয়েল</h2>
+                <p>জাতীয় পাখি</p>
+            </div>
+            
+            <div class="item-card alphabet-item" data-audio="../audio/english-alphabet/c.mp3">
+                <img src="../images/english-alphabet/katal.png" alt="C">
+                <h2>কাঁঠাল</h2>
+                <p>জাতীয় ফল</p>
+            </div>
+
+            <div class="item-card alphabet-item" data-audio="../audio/english-alphabet/b.mp3">
+                <img src="../images/english-alphabet/ils.png" alt="D">
+                <h2>ইলিশ </h2>
+                <p>জাতীয় মাছ</p>
+            </div>
+            
+            <div class="item-card alphabet-item" data-audio="../audio/english-alphabet/c.mp3">
+                <img src="../images/english-alphabet/sapla.png" alt="E">
+                <h2>শাপলা </h2>
+                <p>জাতীয় ফুল</p>
+            </div>
+
+            <div class="item-card alphabet-item" data-audio="../audio/english-alphabet/b.mp3">
+                <img src="../images/english-alphabet/amgac.png" alt="F">
+                <h2>আম গাছ </h2>
+                <p>জাতীয় গাছ </p>
+            </div>
+
+            <div class="item-card alphabet-item" data-audio="../audio/english-alphabet/b.mp3">
+                <img src="../images/english-alphabet/potaka.jpg" alt="F">
+                <h2>লাল সবুজ</h2>
+                <p>জাতীয় পতাকা</p>
+            </div>
+
+            <div class="item-card alphabet-item" data-audio="../audio/english-alphabet/b.mp3">
+                <img src="../images/english-alphabet/Map.png" alt="F">
+                <h2>বাংলাদেশের মানচিত্র</h2>
+                
+            </div>
+        
+            
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 বাংলা শিখি</p>
+    </footer>
+    
+    <script src="../script.js"></script>
+    <script>
+        document.querySelectorAll('.alphabet-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const audioPath = this.getAttribute('data-audio');
+                const audio = new Audio(audioPath);
+                audio.play().catch(e => console.log("Audio error:", e));
+            });
+        });
+    </script>
+</body>
+</html>

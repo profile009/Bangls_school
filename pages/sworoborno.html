@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলা শিখি - স্বরবর্ণ</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="sworoborno-page">
+    <header>
+        <h1>স্বরবর্ণ</h1>
+    </header>
+    
+    <main class="page-container">
+        <a href="../index.html" class="back-button">← হোমে ফিরে যান</a>
+        
+        <div class="item-grid">
+            <div class="item-card sworoborno-item" data-audio="../audio/sworoborno/om.mp3">
+                <img src="../images/ojogor1.png" alt="অ">
+                <h3>অ</h3>
+                <p>অজগর</p>
+            </div>
+            
+            <div class="item-card sworoborno-item" data-audio="../audio/sworoborno/a.mp3">
+                <img src="../images/mango1.png" alt="আ">
+                <h3>আ</h3>
+                <p>আম</p>
+            </div>
+            
+            <div class="item-card sworoborno-item" data-audio="../audio/sworoborno/i.mp3">
+                <img src="../images/idu.webp" alt="ই">
+                <h3>ই</h3>
+                <p>ইঁদুর</p>
+            </div>
+            
+            <div class="item-card sworoborno-item" data-audio="../audio/sworoborno/ee.mp3">
+                <img src="../images/igo.webp" alt="ঈ">
+                <h3>ঈ</h3>
+                <p>ঈগল</p>
+            </div>
+            
+            <div class="item-card sworoborno-item" data-audio="../audio/sworoborno/u.mp3">
+                <img src="../images/ut.jpg" alt="উ">
+                <h3>উ</h3>
+                <p>উট</p>
+            </div>
+            
+            <div class="item-card sworoborno-item" data-audio="../audio/sworoborno/oo.mp3">
+                <img src="../images/usa.jpg" alt="ঊ">
+                <h3>ঊ</h3>
+                <p>ঊষা</p>
+            </div>
+            
+            <div class="item-card sworoborno-item" data-audio="../audio/sworoborno/ri.mp3">
+                <img src="../images/risi.png" alt="ঋ">
+                <h3>ঋ</h3>
+                <p>ঋষি</p>
+            </div>
+            
+            <div class="item-card sworoborno-item" data-audio="../audio/sworoborno/e.mp3">
+                <img src="../images/ektara.png" alt="এ">
+                <h3>এ</h3>
+                <p>একতারা </p>
+            </div>
+            
+            <div class="item-card sworoborno-item" data-audio="../audio/sworoborno/oi.mp3">
+                <img src="../images/oitoa.png" alt="ঐ">
+                <h3>ঐ</h3>
+                <p>ঐরাবত </p>
+            </div>
+            
+            <div class="item-card sworoborno-item" data-audio="../audio/sworoborno/o.mp3">
+                <img src="../images/olko.avif" alt="ও">
+                <h3>ও</h3>
+                <p>ওলকপি </p>
+            </div>
+            
+            <div class="item-card sworoborno-item" data-audio="../audio/sworoborno/ou.mp3">
+                <img src="../images/ousod.png" alt="ঔ">
+                <h3>ঔ</h3>
+                <p>ঔষধ</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 বাংলা শিখি</p>
+    </footer>
+    
+    <script src="../script.js"></script>
+    <script>
+        document.querySelectorAll('.sworoborno-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const audioPath = this.getAttribute('data-audio');
+                const audio = new Audio(audioPath);
+                audio.play().catch(e => console.log("Audio error:", e));
+            });
+        });
+    </script>
+</body>
+</html>

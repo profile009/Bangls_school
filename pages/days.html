@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলা শিখি - সপ্তাহের দিন</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="days-page">
+    <header>
+        <h1>সপ্তাহের দিন</h1>
+    </header>
+    
+    <main class="page-container">
+        <a href="../index.html" class="back-button">← হোমে ফিরে যান</a>
+        
+        <div class="item-grid">
+            <div class="item-card day-item" data-audio="../audio/days/saturday.mp3">
+                <h3>শনিবার</h3>
+                <p>Saturday</p>
+            </div>
+            
+            <div class="item-card day-item" data-audio="../audio/days/sunday.mp3">
+                <h3>রবিবার</h3>
+                <p>Sunday</p>
+            </div>
+            
+            <div class="item-card day-item" data-audio="../audio/days/monday.mp3">
+                <h3>সোমবার</h3>
+                <p>Monday</p>
+            </div>
+
+            <div class="item-card day-item" data-audio="../audio/days/monday.mp3">
+                <h3>মঙ্গলবার</h3>
+                <p>Tuesday</p>
+            </div>
+
+            <div class="item-card day-item" data-audio="../audio/days/monday.mp3">
+                <h3>বুধবার</h3>
+                <p>Wednesday</p>
+            </div>
+
+            <div class="item-card day-item" data-audio="../audio/days/monday.mp3">
+                <h3>বৃহস্পতিবার</h3>
+                <p>Thursday</p>
+            </div>
+            
+            <div class="item-card day-item" data-audio="../audio/days/monday.mp3">
+                <h3>শুক্রবার</h3>
+                <p>Friday</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 বাংলা শিখি</p>
+    </footer>
+    
+    <script src="../script.js"></script>
+    <script>
+        document.querySelectorAll('.day-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const audioPath = this.getAttribute('data-audio');
+                const audio = new Audio(audioPath);
+                audio.play().catch(e => console.log("Audio error:", e));
+            });
+        });
+    </script>
+</body>
+</html>
